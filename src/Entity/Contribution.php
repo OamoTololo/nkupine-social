@@ -18,22 +18,22 @@ class Contribution
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Member::class, inversedBy="contributionBalance")
+     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="contributionBalance")
      */
-    private $memberName;
+    private $member;
 
     /**
      * @ORM\Column(type="decimal", precision=10, scale=2)
      */
-    private $amount;
+    private $amount = 0.00;
 
     /**
-     * @ORM\Column(type="boolean", options={"default": false})
+     * @ORM\Column(type="boolean")
      */
     private $isFine = false;
 
     /**
-     * @ORM\Column(type="date")
+     * @ORM\Column(type="time_immutable")
      */
     private $date;
 
@@ -42,14 +42,14 @@ class Contribution
         return $this->id;
     }
 
-    public function getMemberName(): ?string
+    public function getMember(): ?User
     {
-        return $this->memberName;
+        return $this->member;
     }
 
-    public function setMemberName(string $memberName): self
+    public function setMember(string $member): self
     {
-        $this->memberName = $memberName;
+        $this->member = $member;
 
         return $this;
     }

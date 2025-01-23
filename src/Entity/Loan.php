@@ -18,9 +18,9 @@ class Loan
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Member:class, inversedBy="loanBalance")
+     * @ORM\ManyToOne(targetEntity=User:class, inversedBy="loanBalance")
      */
-    private $memberName;
+    private $member;
 
     /**
      * @ORM\Column(type="decimal", precision=10, scale=2)
@@ -30,20 +30,20 @@ class Loan
     /**
      * @ORM\Column(type="decimal", precision=10, scale=2)
      */
-    private $interest;
+    private $interest =0.00;
 
     /**
-     * @ORM\Column(type="decimal", precision=10, scale=2, options={"default": 0})
+     * @ORM\Column(type="decimal", precision=10, scale=2)
      */
     private $repayment = 0.00;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime_immutable")
      */
     private $requestedAt;
 
     /**
-     * @ORM\Column(type="boolean", options={"default": false})
+     * @ORM\Column(type="boolean")
      */
     private $isApproved = false;
 
@@ -52,14 +52,14 @@ class Loan
         return $this->id;
     }
 
-    public function getMemberName(): ?string
+    public function getMember(): ?User
     {
-        return $this->memberName;
+        return $this->member;
     }
 
-    public function setMemberName(string $memberName): self
+    public function setMember(string $member): self
     {
-        $this->memberName = $memberName;
+        $this->member = $member;
 
         return $this;
     }
