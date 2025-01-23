@@ -18,7 +18,7 @@ class Loan
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity=User:class, inversedBy="loanBalance")
+     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="loanBalance")
      */
     private $member;
 
