@@ -1,0 +1,95 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="{{ asset('assets/css/nkupine.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/all.min..css') }}">
+
+    <style>
+
+
+    </style>
+
+    {% block customstylesheets %} {% endblock %}
+
+    {% block title %} <title>Nkupine Social</title> {% endblock %}
+</head>
+
+<body class="text-center">
+    <div class="container-fluid">
+    {% block menu %}
+        <div class="d-flex justify-content-center align-items-center p-0 px-md-2 mb-3 bg-light border-bottom shadow-sm custom-bg">
+            <h5 class="my-0 font-weight-normal mx-3">
+                <a href="" class="text-decoration-none nav-link active">Nkupine Social Club</a>
+            </h5>
+
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav d-flex flex-row">
+                            <li class="nav-item mx-2">
+                                <a class="nav-link active" aria-current="page" href="#">Members</a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <a class="nav-link " href="#">Home</a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <a class="nav-link " href="#">Members</a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <a class="nav-link" href="#">Contributions</a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <a class="nav-link" href="#">Loans</a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <a class="nav-link" href="#">Meeting</a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <a class="nav-link" href="#">Report</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    {% endblock %}
+
+    {% block main %}
+
+    {% endblock %}
+
+    {% block footer %}
+        <footer class="mt-auto my-md-5 pt-5 border-top text-center">
+            <div class="row">
+                <div class="col-12 col-md">
+                    <small>Copyright &copy; 2025 Nkupine Social Club Tracking Application</small>
+                </div>
+            </div>
+        </footer>
+    {% endblock %}
+</div>
+
+<script src="{{  asset('assets/js/jquery.js')}}"></script>
+<script src="{{  asset('assets/js/popper.js')}}"></script>
+<script src="{{  asset('assets/js/bootstrap.min.js')}}"></script>
+<script src="{{  asset('assets/js/all.min.js')}}"></script>
+
+<script>
+    $(function() {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
+
+    {% block customjavascript %}
+
+    {% endblock %}
+
+</body>
+</html>

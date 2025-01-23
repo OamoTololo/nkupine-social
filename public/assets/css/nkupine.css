@@ -1,0 +1,32 @@
+.navbar-nav .nav-item .nav-link.active {
+    color: #007bff; /* Customize active link color */
+}
+
+/* Custom background color */
+.custom-bg {
+    background-color: black; /* Change to your desired color */
+}
+
+/* Adjust margin for h5 tag */
+h5 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Ensure the footer stays at the bottom */
+.min-vh-100 {
+    min-height: 100vh; /* Set minimum height to fill the viewport */
+}
+
+.mt-auto {
+    margin-top: auto; /* Push the footer to the bottom */
+}
+
+footer {
+    background-color: #f8f9fa; /* Optional: footer background color */
+    padding: 1rem 0;
+}
+
+footer small {
+    color: #6c757d; /* Optional: footer text color */
+}
