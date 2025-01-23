@@ -60,7 +60,6 @@ class Member
 
     /**
      * @ORM\OneToMany(targetEntity=Contribution::class, mappedBy="memmberName")
-     * @ORM\Column(type="decimal", precision=10, scale=2, options={"default": 0})
      */
     private $contributionBalance = 0.00;
 
