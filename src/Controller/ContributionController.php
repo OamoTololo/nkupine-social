@@ -13,8 +13,6 @@ class ContributionController extends AbstractController
      */
     public function index(): Response
     {
-        return $this->render('contribution/index.html.twig', [
-            'controller_name' => 'ContributionController',
-        ]);
+        return $this->render('contribution/index.html.twig');
     }
 }

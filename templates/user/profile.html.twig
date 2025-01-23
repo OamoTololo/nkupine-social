@@ -1,13 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello UserController!{% endblock %}
-
-{% block body %}
-    <h1>Edit Profile</h1>
-    <p>Name: {{ member.name }} {{ member.surname }}</p>
-    <p>Email: {{ member.email }}</p>
-    <p>Phone: {{ member.phone }}</p>
-    <p>Total Contributions: {{ member.contributionTotal }}</p>
-    <p>Outstanding Loan: {{ member.loanOutstanding }}</p>
-    <a href="{{ path('member_edit') }}">Edit Profile</a>
+{% block main %}
+    <h1>Profile</h1>
+{#    <h1>Edit Profile</h1>#}
+{#    <p>Name: {{ member.name }} {{ member.surname }}</p>#}
+{#    <p>Email: {{ member.email }}</p>#}
+{#    <p>Phone: {{ member.phone }}</p>#}
+{#    <p>Total Contributions: {{ member.contributionTotal }}</p>#}
+{#    <p>Outstanding Loan: {{ member.loanOutstanding }}</p>#}
+{#    <a href="{{ path('member_edit') }}">Edit Profile</a>#}
 {% endblock %}

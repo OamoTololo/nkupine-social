@@ -13,8 +13,6 @@ class LoanController extends AbstractController
      */
     public function index(): Response
     {
-        return $this->render('loan/index.html.twig', [
-            'controller_name' => 'LoanController',
-        ]);
+        return $this->render('loan/index.html.twig');
     }
 }

@@ -34,13 +34,11 @@ class UserController extends AbstractController
         //$this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
 
         $user = $this->getUser();
-        $member = $entityManager->getRepository(User::class)->findOneBy(['email' => $user->getEmail()]);
+        //$member = $entityManager->getRepository(User::class)->findOneBy(['email' => $user->getEmail()]);
 
 
 
-        return $this->render('user/profile.html.twig', [
-            'member' => $member,
-        ]);
+        return $this->render('user/profile.html.twig');
     }
 
     public function editProfile(Request $request, EntityManagerInterface $entityManager): Response

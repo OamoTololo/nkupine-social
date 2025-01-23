@@ -13,8 +13,6 @@ class MeetingController extends AbstractController
      */
     public function index(): Response
     {
-        return $this->render('meeting/index.html.twig', [
-            'controller_name' => 'MeetingController',
-        ]);
+        return $this->render('meeting/index.html.twig');
     }
 }
