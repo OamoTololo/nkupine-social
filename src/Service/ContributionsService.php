@@ -18,4 +18,15 @@ class ContributionsService
 
         return $total;
     }
+
+    public function generateStatement(Contribution $contributions): string
+    {
+        $statement = '';
+
+        foreach ($contributions as $contribution) {
+            $statement .= $contribution->getDate()->format('Y-m-d') . $contribution->getAmount() . PHP_EOL;
+        }
+
+        return $statement;
+    }
 }
