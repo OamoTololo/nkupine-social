@@ -9,7 +9,7 @@ use Doctrine\Common\Collections\Collection;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
- * @ORM\Table(name="`member`")
+ * @ORM\Table(name="`user`")
  */
 class User
 {
