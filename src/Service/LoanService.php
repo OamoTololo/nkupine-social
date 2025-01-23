@@ -10,4 +10,9 @@ class LoanService
     {
         return ($amount / 100) * 20;
     }
+
+    public function trackRepayments(Loan $loan, float $repayment): void
+    {
+        $loan->setRepayment($loan->getRepayment() + $repayment);
+    }
 }
