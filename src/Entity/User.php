@@ -51,7 +51,7 @@ class User
     private $contributionTotal = 0.00;
 
     /**
-     * @ORM\Column(type="decimal", precision=10, scale=2})
+     * @ORM\Column(type="decimal", precision=10, scale=2)
      */
     private $loanOutstanding = 0.00;
 
@@ -61,12 +61,12 @@ class User
     private $isExecutive = false;
 
     /**
-     * @ORM\OneToMany(targetEntity=Contribution::class, mappedBy="member")
+     * @ORM\OneToMany(targetEntity=Contribution::class, mappedBy="user")
      */
     private $contributionBalance;
 
     /**
-     * @ORM\OneToMany(targetEntity=Loan::class, mappedBy="member")
+     * @ORM\OneToMany(targetEntity=Loan::class, mappedBy="user")
      */
     private $loanBalance;
 
