@@ -1,2 +1,14 @@
 grumphp:
-    tasks: { yamllint: null }
+    tasks:
+        git_blacklist:
+            keywords:
+                - "die("
+                - "var_dump("
+                - "print_r("
+                - "dump("
+                - "exit;"
+            triggered_by: [php]
+        jsonlint: ~
+        yamllint:
+            parse_custom_tags: true
+        xmllint: ~
