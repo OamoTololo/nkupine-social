@@ -17,7 +17,7 @@ class UserController extends AbstractController
      */
     public function index(EntityManagerInterface $entityManager): Response
     {
-        $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
+        //$this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
 
         $members = $entityManager->getRepository(User::class)->findAll();
 
@@ -31,7 +31,7 @@ class UserController extends AbstractController
      */
     public function profile(EntityManagerInterface $entityManager): Response
     {
-        $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
+        //$this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
 
         $user = $this->getUser();
         $member = $entityManager->getRepository(User::class)->findOneBy(['email' => $user->getEmail()]);
@@ -45,7 +45,7 @@ class UserController extends AbstractController
 
     public function editProfile(Request $request, EntityManagerInterface $entityManager): Response
     {
-        $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
+        //$this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
 
         $user = $this->getUser();
         $member = $entityManager->getRepository(User::class)->findOneBy(['email' => $user->getEmail()]);
