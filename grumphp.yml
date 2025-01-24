@@ -1,5 +1,12 @@
 grumphp:
     tasks:
+        phpcs:
+            standard: PSR2
+            tab_width: ~
+            ignore_patterns: [ ]
+        phpmd:
+            exclude: [ ]
+            ruleset: [ 'cleancode', 'codesize', 'naming' ]
         git_blacklist:
             keywords:
                 - "die("

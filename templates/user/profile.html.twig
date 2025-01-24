@@ -1,7 +1,25 @@
 {% extends 'base.html.twig' %}
 
 {% block main %}
-    <h1>Profile</h1>
+    <div class="container-fluid p-4 shadow mx-auto justify-content-center" style="max-width: 1000px;">
+        {% include ('includes/breadcrumbs.html.twig') %}
+        <h4>Profile</h4>
+        <div class="row">
+            <div class="col-2">
+                {% for member in members %}
+{#                <img src="{{ asset(member.picture) }}" class="border border-danger d-block mx-auto img-fluid rounded-circle" style="width: 150px;">#}
+            </div>
+            <div class="col-9 bg-light p-2">
+                <table class="table table-hover table-striped table-bordered">
+                        <tr><th>Name:</th><td>{{ member.name }}</td></tr>
+                        <tr><th>Surname:</th><td>{{ member.surname }}</td></tr>
+                        <tr><th>Email</th><td>{{ member.email }}</td></tr>
+                        <tr><th>Phone No:</th><td>{{ member.contactInfo }}</td></tr>
+                {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
 {#    <h1>Edit Profile</h1>#}
 {#    <p>Name: {{ member.name }} {{ member.surname }}</p>#}
 {#    <p>Email: {{ member.email }}</p>#}
