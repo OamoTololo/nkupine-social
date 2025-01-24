@@ -131,11 +131,10 @@ class User
 
     public function getPicture(): ?string
     {
-        return $this->picture;
+        return $this->picture ? 'images/'.$this->getPicture() : null;
     }
 
-    public function setPicture(?string $picture): self
-    {
+    public function setPicture(?string $picture): self {
         $this->picture = $picture;
 
         return $this;
